@@ -83,6 +83,13 @@ export const ETH = new Token(
   'ETH',
   'Binance-Peg Ethereum Token'
 )
+export const APBK = new Token(
+  ChainId.MAINNET,
+  '0x3705496eE4614f7fE939E410f5A03dF988148e50',
+  9,
+  'APBK',
+  'ApeBlack'
+)
 
 const WBNB_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -99,7 +106,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BUSD,
     USDT,
     BTCB,
-    ARTH
+    ARTH,
+    APBK
   ]
 }
 
@@ -114,13 +122,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WBNB_ONLY,
-  [ChainId.MAINNET]: [BUSD]
+  [ChainId.MAINNET]: [APBK]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WBNB_ONLY,
-  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], BUSD]
+  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], APBK]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
