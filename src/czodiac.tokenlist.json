@@ -497,6 +497,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://cz.cash/images/tokens/ARTH.usd.png"
+    },    
+    {
+      "name": "APEBLACK",
+      "symbol": "APBK",
+      "address": "0x3705496eE4614f7fE939E410f5A03dF988148e50",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://photos.app.goo.gl/SbZMBKmqcCBFHFGe8"
     }
   ]
 }
