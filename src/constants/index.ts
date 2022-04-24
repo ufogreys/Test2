@@ -128,7 +128,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WBNB_ONLY,
-  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], APBK]
+  [ChainId.MAINNET]: [APBK, ...WBNB_ONLY[ChainId.MAINNET]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
