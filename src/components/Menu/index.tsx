@@ -93,15 +93,15 @@ export default function Menu() {
       </StyledMenuButton>
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://waterminefarm.wixsite.com/my-site-3">
+          <MenuItem id="link" href="https://www.apeblack.com/">
             <Home size={14} />
             {t('Website')}
           </MenuItem>
-          <MenuItem id="link" href="https://t.me/indexsaleplataforma">
+          <MenuItem id="link" href="https://t.me/apeblackglobal">
             <MessageCircle size={14} />
             {t('Telegram')}
           </MenuItem>
-          <MenuItem id="link" href="https://github.com/">
+          <MenuItem id="link" href="https://github.com/apeblack/czcash-swap-fe/">
             <Code size={14} />
             {t('code')}
           </MenuItem>
