@@ -121,20 +121,20 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  ...APBK,
-  [ChainId.MAINNET]: [APBK]
+  ...WBNB_ONLY,
+  [ChainId.MAINNET]: [BUSD, APBK]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  ...APBK,
-  [ChainId.MAINNET]: [APBK, ...WBNB_ONLY[ChainId.MAINNET]]
+  ...WBNB_ONLY,
+  [ChainId.MAINNET]: [...WBNB_ONLY[ChainId.MAINNET], APBK, BUSD]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [APBK, BUSD],
-    [WBNB, APBK]
+    [APBK, USDT]
   ]
 }
 
